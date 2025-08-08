@@ -33,6 +33,7 @@ public abstract class Car {
     private Integer year;
 
     @Enumerated(EnumType.STRING)
+    @Column(insertable = false, updatable = false)
     private CarType type;
 
     @PositiveOrZero(message = "Price must be positive or zero!")

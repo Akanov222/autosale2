@@ -4,6 +4,7 @@ import com.demo.autosale2.dao.CarType;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PositiveOrZero;
 
 import java.math.BigDecimal;
@@ -17,10 +18,10 @@ public record CarRequest(
     @NotBlank(message = "Model can not be blank!")
     String model,
 
-    @NotBlank(message = "Year can not be blank!")
+    @NotNull(message = "Year can not be null!")
     Integer year,
 
-    @NotBlank(message = "Type can not be blank!")
+    @Enumerated(EnumType.STRING)
     CarType type,
 
     @PositiveOrZero

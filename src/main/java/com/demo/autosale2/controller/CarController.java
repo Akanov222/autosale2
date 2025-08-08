@@ -5,10 +5,13 @@ import com.demo.autosale2.dto.CarRequest;
 import com.demo.autosale2.dto.CarResponse;
 import com.demo.autosale2.repository.CarRepository;
 import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+
+import static com.demo.autosale2.dao.CarType.*;
 
 @RestController
 @RequestMapping("/api/cars")
@@ -44,25 +47,22 @@ public class CarController {
 
     @PostMapping
     public ResponseEntity<String> addCar(@Valid @RequestBody CarRequest request) {
-        Car car = switch (request.type()) {
+        Car car = switch(request.type()) {
             case SEDAN -> {
                 Sedan sedan = new Sedan();
                 sedan.setTrunkCapacity(request.trunkCapacity());
                 yield sedan;
             }
-
             case TRUCK -> {
                 Truck truck = new Truck();
                 truck.setLoadCapacity(request.loadCapacity());
                 yield truck;
             }
-
             case MINIVAN -> {
                 Minivan minivan = new Minivan();
                 minivan.setSeatingCapacity(request.seatingCapacity());
                 yield minivan;
             }
-
         };
 
         car.setBrand(request.brand());
@@ -71,6 +71,7 @@ public class CarController {
         car.setType(request.type());
         car.setPrice(request.price());
 
+        carRepository.save(car);
         return ResponseEntity.ok("Car is included!");
     }
 }
