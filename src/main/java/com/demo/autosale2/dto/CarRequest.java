@@ -21,10 +21,10 @@ public record CarRequest(
     @NotNull(message = "Year can not be null!")
     Integer year,
 
-    @Enumerated(EnumType.STRING)
+    @NotNull
     CarType type,
 
-    @PositiveOrZero
+    @PositiveOrZero(message = "Price must be positive or zero!")
     BigDecimal price,
 
     // Опциональные поля для специфичных характеристик
