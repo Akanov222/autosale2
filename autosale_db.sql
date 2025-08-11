@@ -12,7 +12,7 @@ CREATE TABLE car (
                      seating_capacity DOUBLE PRECISION
 );
 
-INSERT INTO car VALUES (1,'Chevrolet', 'COLODADO', 2010, 'TRUCK',
+INSERT INTO car VALUES (1,'Chevrolet', 'COLORADO', 2010, 'TRUCK',
                         25000.0,null,456.0, null);
 
 

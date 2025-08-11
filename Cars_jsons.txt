@@ -1,0 +1,54 @@
+{
+    "brand": "Chevrolet",
+    "model": "Tahoe",
+    "year": 2010,
+    "type": "TRUCK",
+    "price": 35000.00,
+    "trunkCapacity": null,
+    "loadCapacity": 390.0,
+    "seatingCapacity": null
+}
+
+{
+    "brand": "Chevrolet",
+    "model": "Blazer",
+    "year": 2010,
+    "type": "TRUCK",
+    "price": 35000.00,
+    "trunkCapacity": null,
+    "loadCapacity": 320.0,
+    "seatingCapacity": null
+}
+
+{
+    "brand": "Chevrolet",
+    "model": "Colorado",
+    "year": 2010,
+    "type": "TRUCK",
+    "price": 35000.00,
+    "trunkCapacity": null,
+    "loadCapacity": 430.0,
+    "seatingCapacity": null
+}
+
+{
+    "brand": "Chevrolet",
+    "model": "Lacetti",
+    "year": 2014,
+    "type": "SEDAN",
+    "price": 20000.00,
+    "trunkCapacity": 220.0,
+    "loadCapacity": null,
+    "seatingCapacity": null
+}
+
+{
+    "brand": "Chevrolet",
+    "model": "Express",
+    "year": 2016,
+    "type": "MINIVAN",
+    "price": 40000.00,
+    "trunkCapacity": null,
+    "loadCapacity": null,
+    "seatingCapacity": 8.0
+}
