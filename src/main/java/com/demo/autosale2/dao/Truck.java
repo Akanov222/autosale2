@@ -9,9 +9,9 @@ import lombok.NoArgsConstructor;
 @Entity
 @Data
 @NoArgsConstructor
-@DiscriminatorValue("SEDAN")
-public class Sedan extends Car{
+@DiscriminatorValue("TRUCK")
+public class Truck extends Car {
 
-    @Column(name = "trunk_capacity")
-    private Double trunkCapacity;
+    @Column(name = "load_capacity")
+    private Double loadCapacity;
 }

@@ -3,6 +3,7 @@ package com.demo.autosale2.dao;
 import jakarta.persistence.*;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PositiveOrZero;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -28,7 +29,7 @@ public abstract class Car {
     @Column(nullable = false)
     private String model;
 
-    @NotBlank(message = "Year can not be blank!")
+    @NotNull(message = "Year can not be blank!")
     @Column(nullable = false)
     private Integer year;
 
